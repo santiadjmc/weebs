@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicación educativa interactiva para enseñar ciberseguridad a niños de forma divertida y segura">
+    <meta name="keywords" content="ciberseguridad, niños, educación, seguridad online, contraseñas, phishing">
+    <title>CiberKids - Aprende Ciberseguridad Jugando</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link" aria-label="Saltar al contenido principal">Saltar al contenido</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Navegación principal">
+            <div class="nav-container">
+                <!-- Logo -->
+                <div class="logo">
+                    <h1>
+                        <span class="logo-icon" aria-hidden="true">🛡️</span>
+                        CiberKids
+                    </h1>
+                </div>
+                
+                <!-- Theme Toggle -->
+                <div class="theme-toggle-container">
+                    <button 
+                        id="theme-toggle" 
+                        class="theme-toggle" 
+                        aria-label="Cambiar entre modo claro y oscuro"
+                        type="button"
+                    >
+                        <span class="toggle-track">
+                            <span class="toggle-thumb">
+                                <span class="sun-icon" aria-hidden="true">☀️</span>
+                                <span class="moon-icon" aria-hidden="true">🌙</span>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button 
+                    id="mobile-menu-toggle" 
+                    class="mobile-menu-toggle" 
+                    aria-label="Abrir menú de navegación"
+                    aria-expanded="false"
+                    type="button"
+                >
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                
+                <!-- Navigation Menu -->
+                <ul class="nav-menu" role="menubar">
+                    <li role="none">
+                        <a href="#inicio" class="nav-link" role="menuitem">Inicio</a>
+                    </li>
+                    <li role="none">
+                        <a href="#passwords" class="nav-link" role="menuitem">Contraseñas</a>
+                    </li>
+                    <li role="none">
+                        <a href="#phishing" class="nav-link" role="menuitem">Phishing</a>
+                    </li>
+                    <li role="none">
+                        <a href="#redes-sociales" class="nav-link" role="menuitem">Redes Sociales</a>
+                    </li>
+                    <li role="none">
+                        <a href="#privacidad" class="nav-link" role="menuitem">Privacidad</a>
+                    </li>
+                    <li role="none">
+                        <a href="#dispositivos" class="nav-link" role="menuitem">Dispositivos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main">
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-section" role="banner">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="title-highlight">¡Bienvenidos a CiberKids!</span>
+                        <br>
+                        Aprende Ciberseguridad Jugando
+                    </h1>
+                    <p class="hero-subtitle">
+                        Descubre cómo mantenerte seguro en internet de forma divertida y educativa. 
+                        ¡Conviértete en un superhéroe de la ciberseguridad!
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="cta-button primary" onclick="scrollToSection('passwords')">
+                            <span class="button-icon" aria-hidden="true">🚀</span>
+                            ¡Comenzar Aventura!
+                        </button>
+                        <button class="cta-button secondary" onclick="scrollToSection('quiz-general')">
+                            <span class="button-icon" aria-hidden="true">🧩</span>
+                            Tomar Quiz
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-illustration">
+                    <div class="illustration-container">
+                        <span class="hero-emoji" aria-hidden="true">🛡️💻👦👧</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Educational Sections -->
+        
+        <!-- Section 1: Strong Passwords -->
+        <section id="passwords" class="education-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-icon" aria-hidden="true">🔐</span>
+                        Creación de Contraseñas Seguras
+                    </h2>
+                    <p class="section-subtitle">
+                        Aprende a crear contraseñas súper seguras que protejan tus cuentas como un escudo mágico
+                    </p>
+                </div>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>¿Qué es una contraseña segura?</h3>
+                        <p>Una contraseña segura es como una llave especial que solo tú conoces. Debe ser:</p>
+                        <ul class="feature-list">
+                            <li><strong>Larga:</strong> Al menos 8 caracteres (¡mejor si son más!)</li>
+                            <li><strong>Variada:</strong> Mayúsculas, minúsculas, números y símbolos</li>
+                            <li><strong>Única:</strong> Diferente para cada cuenta</li>
+                            <li><strong>Secreta:</strong> No la compartas con nadie</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3>Ejemplos de Contraseñas</h3>
+                        <div class="password-examples">
+                            <div class="password-example bad">
+                                <span class="example-label">❌ Mala:</span>
+                                <code>123456</code>
+                                <p>Muy fácil de adivinar</p>
+                            </div>
+                            <div class="password-example good">
+                                <span class="example-label">✅ Buena:</span>
+                                <code>MiGato2023$</code>
+                                <p>Larga, variada y memorable</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Password Generator Game -->
+                <div class="interactive-game">
+                    <h3>🎮 Generador de Contraseñas</h3>
+                    <p>¡Crea tu propia contraseña segura!</p>
+                    
+                    <div class="game-interface">
+                        <div class="password-inputs">
+                            <label for="password-word">Palabra favorita:</label>
+                            <input type="text" id="password-word" placeholder="ej: Gato">
+                            
+                            <label for="password-number">Número especial:</label>
+                            <input type="number" id="password-number" placeholder="ej: 2023">
+                            
+                            <label for="password-symbol">Símbolo:</label>
+                            <select id="password-symbol">
+                                <option value="$">$ (Dólar)</option>
+                                <option value="!">! (Exclamación)</option>
+                                <option value="@">@ (Arroba)</option>
+                                <option value="#"># (Numeral)</option>
+                            </select>
+                        </div>
+                        
+                        <button id="generate-password" class="game-button">
+                            ✨ Generar Contraseña
+                        </button>
+                        
+                        <div id="generated-password" class="password-result"></div>
+                        <div id="password-strength" class="strength-indicator"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Phishing Awareness -->
+        <section id="phishing" class="education-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-icon" aria-hidden="true">🎣</span>
+                        Conciencia sobre Phishing
+                    </h2>
+                    <p class="section-subtitle">
+                        Aprende a identificar y evitar los intentos de phishing - ¡no caigas en la trampa!
+                    </p>
+                </div>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>¿Qué es el Phishing?</h3>
+                        <p>El phishing es como cuando alguien se disfraza para engañarte y robarte información importante. Los cibercriminales se hacen pasar por empresas o personas de confianza para:</p>
+                        <ul class="feature-list">
+                            <li>Robar tus contraseñas</li>
+                            <li>Obtener información personal</li>
+                            <li>Acceder a tus cuentas</li>
+                            <li>Instalar virus en tu dispositivo</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3>Señales de Alerta 🚨</h3>
+                        <div class="warning-signs">
+                            <div class="warning-item">
+                                <span class="warning-icon">📧</span>
+                                <strong>Emails urgentes:</strong> "¡Actúa ahora o perderás tu cuenta!"
+                            </div>
+                            <div class="warning-item">
+                                <span class="warning-icon">🔗</span>
+                                <strong>Enlaces sospechosos:</strong> URLs extrañas o acortadas
+                            </div>
+                            <div class="warning-item">
+                                <span class="warning-icon">💰</span>
+                                <strong>Ofertas increíbles:</strong> Premios o dinero gratis
+                            </div>
+                            <div class="warning-item">
+                                <span class="warning-icon">❓</span>
+                                <strong>Información personal:</strong> Piden contraseñas por email
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Phishing Detection Game -->
+                <div class="interactive-game">
+                    <h3>🕵️ Juego de Detección de Phishing</h3>
+                    <p>¿Puedes identificar cuáles emails son reales y cuáles son phishing?</p>
+                    
+                    <div id="phishing-game" class="game-interface">
+                        <div id="email-container" class="email-container">
+                            <!-- Emails will be dynamically loaded here -->
+                        </div>
+                        
+                        <div class="game-controls">
+                            <button id="real-email-btn" class="game-button safe">✅ Email Real</button>
+                            <button id="phishing-email-btn" class="game-button danger">❌ Phishing</button>
+                        </div>
+                        
+                        <div id="phishing-score" class="game-score">
+                            <span>Puntuación: <strong id="score-value">0</strong>/10</span>
+                        </div>
+                        
+                        <div id="phishing-feedback" class="game-feedback"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Safe Social Media Habits -->
+        <section id="redes-sociales" class="education-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-icon" aria-hidden="true">📱</span>
+                        Hábitos Seguros en Redes Sociales
+                    </h2>
+                    <p class="section-subtitle">
+                        Disfruta de las redes sociales de forma segura y responsable
+                    </p>
+                </div>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Configuración de Privacidad</h3>
+                        <p>Mantén tu información privada configurando correctamente tus cuentas:</p>
+                        <ul class="feature-list">
+                            <li>Perfil privado en lugar de público</li>
+                            <li>Acepta solo amigos que conoces</li>
+                            <li>No compartas ubicación en tiempo real</li>
+                            <li>Revisa qué información es visible</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3>Qué NO Compartir</h3>
+                        <div class="dont-share-grid">
+                            <div class="dont-share-item">
+                                <span class="share-icon">🏠</span>
+                                <strong>Dirección</strong>
+                                <p>Nunca compartas dónde vives</p>
+                            </div>
+                            <div class="dont-share-item">
+                                <span class="share-icon">📞</span>
+                                <strong>Teléfono</strong>
+                                <p>Tu número es información privada</p>
+                            </div>
+                            <div class="dont-share-item">
+                                <span class="share-icon">🎂</span>
+                                <strong>Fecha completa</strong>
+                                <p>Solo el día y mes, no el año</p>
+                            </div>
+                            <div class="dont-share-item">
+                                <span class="share-icon">🏫</span>
+                                <strong>Escuela</strong>
+                                <p>No digas exactamente dónde estudias</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Social Media Quiz -->
+                <div class="interactive-game">
+                    <h3>📊 Quiz de Redes Sociales</h3>
+                    <p>¡Demuestra qué tanto sabes sobre seguridad en redes sociales!</p>
+                    
+                    <div id="social-quiz" class="quiz-container">
+                        <div id="social-question-container" class="question-container">
+                            <!-- Questions will be loaded dynamically -->
+                        </div>
+                        
+                        <div class="quiz-progress">
+                            <div id="social-progress-bar" class="progress-bar">
+                                <div id="social-progress-fill" class="progress-fill"></div>
+                            </div>
+                            <span id="social-question-counter">Pregunta 1 de 5</span>
+                        </div>
+                        
+                        <div id="social-quiz-result" class="quiz-result"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Online Privacy -->
+        <section id="privacidad" class="education-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-icon" aria-hidden="true">🔒</span>
+                        Privacidad en Línea
+                    </h2>
+                    <p class="section-subtitle">
+                        Protege tu información personal como un tesoro valioso
+                    </p>
+                </div>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>¿Qué es la Privacidad Digital?</h3>
+                        <p>La privacidad digital es tu derecho a controlar qué información compartes en internet y con quién la compartes. Es como tener una caja fuerte personal para tus datos.</p>
+                        
+                        <div class="privacy-tips">
+                            <div class="tip-item">
+                                <span class="tip-icon">👤</span>
+                                <strong>Información Personal:</strong> Nunca compartas datos como tu nombre completo, dirección o número de teléfono con extraños
+                            </div>
+                            <div class="tip-item">
+                                <span class="tip-icon">📸</span>
+                                <strong>Fotos y Videos:</strong> Piensa dos veces antes de subir imágenes - pueden estar ahí para siempre
+                            </div>
+                            <div class="tip-item">
+                                <span class="tip-icon">🍪</span>
+                                <strong>Cookies:</strong> Son pequeños archivos que las páginas web usan para recordarte
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3>Navegación Segura</h3>
+                        <div class="safe-browsing">
+                            <h4>Busca estas señales de seguridad:</h4>
+                            <ul class="security-indicators">
+                                <li>
+                                    <span class="indicator-icon">🔒</span>
+                                    <strong>HTTPS:</strong> URLs que empiecen con "https://"
+                                </li>
+                                <li>
+                                    <span class="indicator-icon">✅</span>
+                                    <strong>Candado:</strong> Ícono de candado en la barra de direcciones
+                                </li>
+                                <li>
+                                    <span class="indicator-icon">🏛️</span>
+                                    <strong>Sitios conocidos:</strong> Páginas web de empresas reconocidas
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Privacy Settings Simulator -->
+                <div class="interactive-game">
+                    <h3>⚙️ Simulador de Configuración de Privacidad</h3>
+                    <p>Practica configurando la privacidad de una cuenta ficticia</p>
+                    
+                    <div id="privacy-simulator" class="simulator-interface">
+                        <div class="mock-settings">
+                            <h4>Configuración de Cuenta - MiRed Social</h4>
+                            
+                            <div class="setting-group">
+                                <label class="setting-label">
+                                    <span>Perfil público</span>
+                                    <input type="checkbox" id="public-profile" class="setting-toggle">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                                <p class="setting-description">Permite que cualquiera vea tu perfil</p>
+                            </div>
+                            
+                            <div class="setting-group">
+                                <label class="setting-label">
+                                    <span>Mostrar ubicación</span>
+                                    <input type="checkbox" id="show-location" class="setting-toggle">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                                <p class="setting-description">Comparte tu ubicación en las publicaciones</p>
+                            </div>
+                            
+                            <div class="setting-group">
+                                <label class="setting-label">
+                                    <span>Permitir mensajes de extraños</span>
+                                    <input type="checkbox" id="stranger-messages" class="setting-toggle">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                                <p class="setting-description">Recibe mensajes de personas que no conoces</p>
+                            </div>
+                            
+                            <div class="setting-group">
+                                <label class="setting-label">
+                                    <span>Información visible para todos</span>
+                                    <input type="checkbox" id="public-info" class="setting-toggle">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                                <p class="setting-description">Muestra tu información personal públicamente</p>
+                            </div>
+                        </div>
+                        
+                        <button id="check-privacy-settings" class="game-button">
+                            🔍 Verificar Configuración
+                        </button>
+                        
+                        <div id="privacy-feedback" class="privacy-feedback"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Responsible Device Usage -->
+        <section id="dispositivos" class="education-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-icon" aria-hidden="true">💻</span>
+                        Uso Responsable de Dispositivos
+                    </h2>
+                    <p class="section-subtitle">
+                        Aprende a usar tus dispositivos de forma segura y responsable
+                    </p>
+                </div>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Protección Física</h3>
+                        <p>Mantén tus dispositivos seguros físicamente:</p>
+                        <ul class="feature-list">
+                            <li><strong>Bloqueo de pantalla:</strong> Usa PIN, contraseña o huella dactilar</li>
+                            <li><strong>No los dejes solos:</strong> Nunca dejes tu dispositivo desatendido</li>
+                            <li><strong>Cierra sesiones:</strong> Sal de tus cuentas cuando termines</li>
+                            <li><strong>Ubicación segura:</strong> Guárdalos en lugares seguros</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3>Descargas Seguras</h3>
+                        <div class="download-safety">
+                            <h4>✅ Fuentes Confiables:</h4>
+                            <ul class="safe-sources">
+                                <li>App Store / Google Play Store</li>
+                                <li>Sitios web oficiales de las apps</li>
+                                <li>Tiendas de aplicaciones reconocidas</li>
+                            </ul>
+                            
+                            <h4>❌ Evita Descargar De:</h4>
+                            <ul class="unsafe-sources">
+                                <li>Sitios web desconocidos</li>
+                                <li>Enlaces en emails sospechosos</li>
+                                <li>Aplicaciones "piratas" o crackeadas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Device Security Checklist -->
+                <div class="interactive-game">
+                    <h3>📋 Lista de Verificación de Seguridad</h3>
+                    <p>Revisa qué tan seguro tienes tu dispositivo</p>
+                    
+                    <div id="security-checklist" class="checklist-interface">
+                        <div class="checklist-items">
+                            <div class="checklist-item">
+                                <input type="checkbox" id="screen-lock" class="checklist-checkbox">
+                                <label for="screen-lock">¿Tienes bloqueo de pantalla activado?</label>
+                            </div>
+                            
+                            <div class="checklist-item">
+                                <input type="checkbox" id="auto-updates" class="checklist-checkbox">
+                                <label for="auto-updates">¿Tienes actualizaciones automáticas activadas?</label>
+                            </div>
+                            
+                            <div class="checklist-item">
+                                <input type="checkbox" id="antivirus" class="checklist-checkbox">
+                                <label for="antivirus">¿Tienes software antivirus instalado?</label>
+                            </div>
+                            
+                            <div class="checklist-item">
+                                <input type="checkbox" id="backup" class="checklist-checkbox">
+                                <label for="backup">¿Haces copias de seguridad regulares?</label>
+                            </div>
+                            
+                            <div class="checklist-item">
+                                <input type="checkbox" id="unknown-sources" class="checklist-checkbox">
+                                <label for="unknown-sources">¿Solo descargas apps de fuentes confiables?</label>
+                            </div>
+                            
+                            <div class="checklist-item">
+                                <input type="checkbox" id="logout-habit" class="checklist-checkbox">
+                                <label for="logout-habit">¿Cierras sesiones cuando terminas de usar apps?</label>
+                            </div>
+                        </div>
+                        
+                        <div id="checklist-result" class="checklist-result">
+                            <div class="security-score">
+                                <span>Tu puntuación de seguridad: </span>
+                                <span id="security-score" class="score-value">0</span>/6
+                            </div>
+                            <div id="security-feedback" class="security-feedback"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Quiz Section -->
+        <section id="quiz-general" class="education-section quiz-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="section-icon" aria-hidden="true">🏆</span>
+                        Quiz Final de Ciberseguridad
+                    </h2>
+                    <p class="section-subtitle">
+                        ¡Pon a prueba todo lo que has aprendido y conviértete en un experto en ciberseguridad!
+                    </p>
+                </div>
+                
+                <div id="final-quiz" class="final-quiz-container">
+                    <div id="quiz-start" class="quiz-start">
+                        <div class="quiz-info">
+                            <h3>¿Estás listo para el desafío?</h3>
+                            <p>Este quiz incluye preguntas sobre todos los temas que hemos visto:</p>
+                            <ul>
+                                <li>Contraseñas seguras</li>
+                                <li>Detección de phishing</li>
+                                <li>Seguridad en redes sociales</li>
+                                <li>Privacidad online</li>
+                                <li>Uso responsable de dispositivos</li>
+                            </ul>
+                        </div>
+                        <button id="start-final-quiz" class="cta-button primary">
+                            🚀 ¡Comenzar Quiz!
+                        </button>
+                    </div>
+                    
+                    <div id="quiz-content" class="quiz-content" style="display: none;">
+                        <div id="final-question-container" class="question-container">
+                            <!-- Questions will be loaded dynamically -->
+                        </div>
+                        
+                        <div class="quiz-progress">
+                            <div id="final-progress-bar" class="progress-bar">
+                                <div id="final-progress-fill" class="progress-fill"></div>
+                            </div>
+                            <span id="final-question-counter">Pregunta 1 de 10</span>
+                        </div>
+                    </div>
+                    
+                    <div id="quiz-results" class="quiz-results" style="display: none;">
+                        <!-- Results will be shown here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CiberKids</h3>
+                    <p>Educación en ciberseguridad para niños, de forma divertida y segura.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Recursos Adicionales</h3>
+                    <ul class="footer-links">
+                        <li><a href="#passwords">Guía de Contraseñas</a></li>
+                        <li><a href="#phishing">Detección de Phishing</a></li>
+                        <li><a href="#privacidad">Privacidad Online</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Para Padres y Educadores</h3>
+                    <p>Esta aplicación ha sido diseñada para enseñar conceptos básicos de ciberseguridad de manera apropiada para niños.</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 CiberKids. Desarrollado con ❤️ para la educación en ciberseguridad infantil.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/games.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
