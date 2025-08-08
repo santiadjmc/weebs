@@ -1,0 +1,24 @@
+{
+  "name": "cybersecurity-kids-app",
+  "version": "1.0.0",
+  "description": "Interactive cybersecurity education web application for children in Spanish",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8080",
+    "build": "echo 'Static site - no build required'",
+    "test": "echo 'No tests configured yet'"
+  },
+  "keywords": [
+    "cybersecurity",
+    "education",
+    "children",
+    "spanish",
+    "interactive",
+    "web-app"
+  ],
+  "author": "Cybersecurity Education Team",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
