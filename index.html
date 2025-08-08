@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprende ciberseguridad de forma divertida e interactiva. Una aplicación educativa para niños sobre seguridad en internet.">
+    <meta name="keywords" content="ciberseguridad, niños, educación, internet, seguridad, contraseñas, privacidad">
+    <title>CiberNiños - Aprende Ciberseguridad Divertida</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body data-theme="light">
+    <!-- Navigation Header -->
+    <nav class="navbar" role="navigation" aria-label="navegación principal">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-shield-halved"></i>
+                <span>CiberNiños</span>
+            </div>
+            
+            <!-- Theme Toggle Button -->
+            <button class="theme-toggle" id="themeToggle" aria-label="cambiar tema" title="Cambiar tema">
+                <div class="toggle-track">
+                    <div class="toggle-thumb">
+                        <i class="fas fa-sun sun-icon"></i>
+                        <i class="fas fa-moon moon-icon"></i>
+                    </div>
+                </div>
+            </button>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Navigation Menu -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="#contraseñas" class="nav-link">Contraseñas</a></li>
+                <li><a href="#phishing" class="nav-link">Phishing</a></li>
+                <li><a href="#redes-sociales" class="nav-link">Redes Sociales</a></li>
+                <li><a href="#privacidad" class="nav-link">Privacidad</a></li>
+                <li><a href="#dispositivos" class="nav-link">Dispositivos</a></li>
+                <li><a href="#juegos" class="nav-link">Juegos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            ¡Bienvenido a <span class="gradient-text">CiberNiños</span>!
+                        </h1>
+                        <p class="hero-subtitle">
+                            Aprende sobre ciberseguridad de forma divertida y segura. 
+                            Conviértete en un superhéroe digital y protege tu mundo online.
+                        </p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary" onclick="scrollToSection('contraseñas')">
+                                <i class="fas fa-rocket"></i>
+                                ¡Comenzar Aventura!
+                            </button>
+                            <button class="btn btn-secondary" onclick="scrollToSection('juegos')">
+                                <i class="fas fa-gamepad"></i>
+                                Jugar Ahora
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="hero-character">
+                            <div class="character-body">
+                                <div class="shield-emblem">
+                                    <i class="fas fa-shield-halved"></i>
+                                </div>
+                            </div>
+                            <div class="floating-icons">
+                                <i class="fas fa-lock"></i>
+                                <i class="fas fa-wifi"></i>
+                                <i class="fas fa-mobile-alt"></i>
+                                <i class="fas fa-eye-slash"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Passwords Section -->
+        <section id="contraseñas" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-key"></i>
+                        Contraseñas Súper Fuertes
+                    </h2>
+                    <p class="section-subtitle">
+                        Aprende a crear contraseñas que protejan tus cuentas como un escudo mágico
+                    </p>
+                </div>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <div class="card-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>¿Qué es una contraseña fuerte?</h3>
+                        <p>Una contraseña fuerte es como una llave especial que solo tú conoces. Debe tener:</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> Al menos 8 caracteres</li>
+                            <li><i class="fas fa-check"></i> Letras mayúsculas y minúsculas</li>
+                            <li><i class="fas fa-check"></i> Números</li>
+                            <li><i class="fas fa-check"></i> Símbolos especiales (!@#$)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-card">
+                        <div class="card-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Consejos Mágicos</h3>
+                        <div class="tips-container">
+                            <div class="tip-item">
+                                <i class="fas fa-star"></i>
+                                <span>Usa frases que recuerdes: "MiGato3sAzul!"</span>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-star"></i>
+                                <span>Nunca uses tu nombre o fecha de nacimiento</span>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-star"></i>
+                                <span>Cada cuenta debe tener su propia contraseña</span>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-star"></i>
+                                <span>Guárdala en un lugar seguro</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Interactive Password Tester -->
+                <div class="interactive-tool">
+                    <h3><i class="fas fa-tools"></i> Probador de Contraseñas</h3>
+                    <div class="password-tester">
+                        <div class="input-group">
+                            <input type="password" id="passwordInput" placeholder="Escribe tu contraseña aquí...">
+                            <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="strength-meter">
+                            <div class="strength-bar" id="strengthBar"></div>
+                            <div class="strength-text" id="strengthText">Escribe una contraseña</div>
+                        </div>
+                        <div class="password-feedback" id="passwordFeedback"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phishing Section -->
+        <section id="phishing" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-fishing-pole"></i>
+                        Cuidado con el Phishing
+                    </h2>
+                    <p class="section-subtitle">
+                        Aprende a detectar cuando alguien intenta robarte información personal
+                    </p>
+                </div>
+                
+                <div class="content-grid">
+                    <div class="content-card danger-card">
+                        <div class="card-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3>¿Qué es el Phishing?</h3>
+                        <p>
+                            El phishing es cuando personas malas se hacen pasar por sitios web o empresas conocidas 
+                            para robarte información personal como contraseñas o datos de tarjetas.
+                        </p>
+                        <div class="warning-box">
+                            <i class="fas fa-warning"></i>
+                            <span>¡Es como un disfraz digital para engañarte!</span>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card">
+                        <div class="card-icon">
+                            <i class="fas fa-detective"></i>
+                        </div>
+                        <h3>Señales de Alerta</h3>
+                        <div class="alert-signals">
+                            <div class="signal-item">
+                                <i class="fas fa-times-circle"></i>
+                                <span>Emails con errores de ortografía</span>
+                            </div>
+                            <div class="signal-item">
+                                <i class="fas fa-times-circle"></i>
+                                <span>Piden información personal urgente</span>
+                            </div>
+                            <div class="signal-item">
+                                <i class="fas fa-times-circle"></i>
+                                <span>Enlaces que no coinciden con la empresa</span>
+                            </div>
+                            <div class="signal-item">
+                                <i class="fas fa-times-circle"></i>
+                                <span>Amenazas o premios "demasiado buenos"</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Interactive Phishing Game -->
+                <div class="interactive-tool">
+                    <h3><i class="fas fa-gamepad"></i> Juego: ¿Real o Falso?</h3>
+                    <div class="phishing-game" id="phishingGame">
+                        <div class="game-score">
+                            <span>Puntuación: <span id="phishingScore">0</span></span>
+                            <span>Pregunta: <span id="questionNumber">1</span>/5</span>
+                        </div>
+                        <div class="email-example" id="emailExample">
+                            <!-- Email examples will be loaded here -->
+                        </div>
+                        <div class="game-buttons">
+                            <button class="btn btn-success" onclick="checkPhishing(true)">
+                                <i class="fas fa-check"></i> Es Real
+                            </button>
+                            <button class="btn btn-danger" onclick="checkPhishing(false)">
+                                <i class="fas fa-times"></i> Es Phishing
+                            </button>
+                        </div>
+                        <div class="game-feedback" id="phishingFeedback"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Section -->
+        <section id="redes-sociales" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-users"></i>
+                        Redes Sociales Seguras
+                    </h2>
+                    <p class="section-subtitle">
+                        Diviértete online de forma segura y responsable
+                    </p>
+                </div>
+                
+                <div class="social-rules">
+                    <div class="rule-card">
+                        <div class="rule-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3>Perfil Privado</h3>
+                        <p>Mantén tu perfil privado para que solo tus amigos puedan ver tus publicaciones.</p>
+                    </div>
+                    
+                    <div class="rule-card">
+                        <div class="rule-icon">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <h3>Solo Amigos Conocidos</h3>
+                        <p>Solo acepta solicitudes de amistad de personas que realmente conoces en la vida real.</p>
+                    </div>
+                    
+                    <div class="rule-card">
+                        <div class="rule-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Ubicación Secreta</h3>
+                        <p>Nunca compartas tu ubicación exacta o planes de viaje en tiempo real.</p>
+                    </div>
+                    
+                    <div class="rule-card">
+                        <div class="rule-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Sé Amable</h3>
+                        <p>Trata a otros con respeto y amabilidad. Si alguien es malo contigo, cuéntale a un adulto.</p>
+                    </div>
+                </div>
+                
+                <!-- Social Media Quiz -->
+                <div class="interactive-tool">
+                    <h3><i class="fas fa-question-circle"></i> Quiz: ¿Qué Harías?</h3>
+                    <div class="social-quiz" id="socialQuiz">
+                        <div class="quiz-question" id="socialQuestion">
+                            <!-- Quiz questions will be loaded here -->
+                        </div>
+                        <div class="quiz-options" id="socialOptions">
+                            <!-- Quiz options will be loaded here -->
+                        </div>
+                        <div class="quiz-feedback" id="socialFeedback"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy Section -->
+        <section id="privacidad" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-eye-slash"></i>
+                        Tu Privacidad es Importante
+                    </h2>
+                    <p class="section-subtitle">
+                        Aprende a proteger tu información personal como un tesoro
+                    </p>
+                </div>
+                
+                <div class="privacy-concepts">
+                    <div class="concept-card">
+                        <div class="concept-icon">
+                            <i class="fas fa-id-card"></i>
+                        </div>
+                        <h3>Información Personal</h3>
+                        <div class="info-types">
+                            <div class="info-item private">
+                                <i class="fas fa-lock"></i>
+                                <span>Nombre completo</span>
+                            </div>
+                            <div class="info-item private">
+                                <i class="fas fa-lock"></i>
+                                <span>Dirección de casa</span>
+                            </div>
+                            <div class="info-item private">
+                                <i class="fas fa-lock"></i>
+                                <span>Número de teléfono</span>
+                            </div>
+                            <div class="info-item private">
+                                <i class="fas fa-lock"></i>
+                                <span>Nombre de tu escuela</span>
+                            </div>
+                        </div>
+                        <p class="concept-text">Esta información debe mantenerse en privado y solo compartirse con adultos de confianza.</p>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <div class="concept-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <h3>Lo Que SÍ Puedes Compartir</h3>
+                        <div class="info-types">
+                            <div class="info-item safe">
+                                <i class="fas fa-check"></i>
+                                <span>Tu primer nombre</span>
+                            </div>
+                            <div class="info-item safe">
+                                <i class="fas fa-check"></i>
+                                <span>Tus hobbies favoritos</span>
+                            </div>
+                            <div class="info-item safe">
+                                <i class="fas fa-check"></i>
+                                <span>Tu color favorito</span>
+                            </div>
+                            <div class="info-item safe">
+                                <i class="fas fa-check"></i>
+                                <span>Tu comida favorita</span>
+                            </div>
+                        </div>
+                        <p class="concept-text">Esta información es segura de compartir y te ayuda a hacer amigos online.</p>
+                    </div>
+                </div>
+                
+                <!-- Privacy Settings Simulator -->
+                <div class="interactive-tool">
+                    <h3><i class="fas fa-cog"></i> Simulador de Configuración de Privacidad</h3>
+                    <div class="privacy-simulator">
+                        <div class="device-mockup">
+                            <div class="mockup-header">
+                                <div class="mockup-buttons">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <span class="mockup-title">Mi Perfil</span>
+                            </div>
+                            <div class="mockup-content">
+                                <div class="setting-item">
+                                    <span>Perfil público</span>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="publicProfile">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                <div class="setting-item">
+                                    <span>Mostrar ubicación</span>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="showLocation">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                <div class="setting-item">
+                                    <span>Permitir mensajes de extraños</span>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="allowMessages">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                <div class="setting-item">
+                                    <span>Compartir información con apps</span>
+                                    <label class="toggle-switch">
+                                        <input type="checkbox" id="shareData">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="privacy-score">
+                            <div class="score-circle" id="privacyScore">
+                                <span class="score-number">0</span>
+                                <span class="score-label">Privacidad</span>
+                            </div>
+                            <div class="score-feedback" id="privacyFeedback">
+                                Ajusta la configuración para mejorar tu privacidad
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Device Safety Section -->
+        <section id="dispositivos" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-mobile-alt"></i>
+                        Uso Responsable de Dispositivos
+                    </h2>
+                    <p class="section-subtitle">
+                        Cuida tus dispositivos como cuidas tus juguetes favoritos
+                    </p>
+                </div>
+                
+                <div class="device-tips">
+                    <div class="tip-category">
+                        <h3><i class="fas fa-shield-alt"></i> Protección Física</h3>
+                        <div class="tips-grid">
+                            <div class="tip-card">
+                                <i class="fas fa-lock"></i>
+                                <h4>Siempre Bloquea</h4>
+                                <p>Bloquea tu dispositivo cuando no lo uses, como cerrar la puerta de tu cuarto.</p>
+                            </div>
+                            <div class="tip-card">
+                                <i class="fas fa-eye"></i>
+                                <h4>Pantalla Privada</h4>
+                                <p>No dejes que extraños vean tu pantalla cuando escribes contraseñas.</p>
+                            </div>
+                            <div class="tip-card">
+                                <i class="fas fa-hand-paper"></i>
+                                <h4>No Prestes</h4>
+                                <p>No prestes tu dispositivo a personas que no conoces bien.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tip-category">
+                        <h3><i class="fas fa-download"></i> Descargas Seguras</h3>
+                        <div class="tips-grid">
+                            <div class="tip-card">
+                                <i class="fas fa-store"></i>
+                                <h4>Tiendas Oficiales</h4>
+                                <p>Solo descarga aplicaciones de tiendas oficiales como Google Play o App Store.</p>
+                            </div>
+                            <div class="tip-card">
+                                <i class="fas fa-star"></i>
+                                <h4>Lee Reseñas</h4>
+                                <p>Antes de descargar, lee las reseñas y verifica que tenga buenas puntuaciones.</p>
+                            </div>
+                            <div class="tip-card">
+                                <i class="fas fa-user-check"></i>
+                                <h4>Pide Permiso</h4>
+                                <p>Siempre pide permiso a tus padres antes de descargar nuevas aplicaciones.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Device Security Checklist -->
+                <div class="interactive-tool">
+                    <h3><i class="fas fa-tasks"></i> Lista de Verificación de Seguridad</h3>
+                    <div class="security-checklist">
+                        <div class="checklist-item" data-points="10">
+                            <input type="checkbox" id="check1" onchange="updateSecurityScore()">
+                            <label for="check1">
+                                <i class="fas fa-lock"></i>
+                                Mi dispositivo tiene contraseña o patrón de bloqueo
+                            </label>
+                        </div>
+                        <div class="checklist-item" data-points="15">
+                            <input type="checkbox" id="check2" onchange="updateSecurityScore()">
+                            <label for="check2">
+                                <i class="fas fa-sync-alt"></i>
+                                Tengo las actualizaciones automáticas activadas
+                            </label>
+                        </div>
+                        <div class="checklist-item" data-points="10">
+                            <input type="checkbox" id="check3" onchange="updateSecurityScore()">
+                            <label for="check3">
+                                <i class="fas fa-shield-virus"></i>
+                                Solo descargo aplicaciones de tiendas oficiales
+                            </label>
+                        </div>
+                        <div class="checklist-item" data-points="15">
+                            <input type="checkbox" id="check4" onchange="updateSecurityScore()">
+                            <label for="check4">
+                                <i class="fas fa-wifi"></i>
+                                Evito conectarme a WiFi públicas para cosas importantes
+                            </label>
+                        </div>
+                        <div class="checklist-item" data-points="10">
+                            <input type="checkbox" id="check5" onchange="updateSecurityScore()">
+                            <label for="check5">
+                                <i class="fas fa-user-friends"></i>
+                                Solo comparto mi dispositivo con familia de confianza
+                            </label>
+                        </div>
+                        
+                        <div class="security-score-display">
+                            <div class="score-meter">
+                                <div class="score-fill" id="scoreFill"></div>
+                                <div class="score-text">
+                                    <span id="currentScore">0</span>/60 puntos
+                                </div>
+                            </div>
+                            <div class="score-message" id="scoreMessage">
+                                ¡Marca los elementos para mejorar tu seguridad!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Games Section -->
+        <section id="juegos" class="section games-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-gamepad"></i>
+                        Juegos Educativos
+                    </h2>
+                    <p class="section-subtitle">
+                        Aprende jugando con estos divertidos minijuegos de ciberseguridad
+                    </p>
+                </div>
+                
+                <div class="games-grid">
+                    <div class="game-card" onclick="openGame('password-builder')">
+                        <div class="game-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <h3>Constructor de Contraseñas</h3>
+                        <p>Ayuda al robot a construir contraseñas súper fuertes combinando diferentes elementos.</p>
+                        <div class="game-stats">
+                            <span><i class="fas fa-clock"></i> 3-5 min</span>
+                            <span><i class="fas fa-star"></i> Fácil</span>
+                        </div>
+                        <button class="btn btn-game">¡Jugar!</button>
+                    </div>
+                    
+                    <div class="game-card" onclick="openGame('email-detective')">
+                        <div class="game-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Detective de Emails</h3>
+                        <p>Conviértete en detective y descubre qué emails son reales y cuáles son trampas.</p>
+                        <div class="game-stats">
+                            <span><i class="fas fa-clock"></i> 5-7 min</span>
+                            <span><i class="fas fa-star"></i> Medio</span>
+                        </div>
+                        <button class="btn btn-game">¡Investigar!</button>
+                    </div>
+                    
+                    <div class="game-card" onclick="openGame('privacy-guardian')">
+                        <div class="game-icon">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <h3>Guardián de la Privacidad</h3>
+                        <p>Protege la información personal de los personajes configurando su privacidad correctamente.</p>
+                        <div class="game-stats">
+                            <span><i class="fas fa-clock"></i> 4-6 min</span>
+                            <span><i class="fas fa-star"></i> Medio</span>
+                        </div>
+                        <button class="btn btn-game">¡Proteger!</button>
+                    </div>
+                    
+                    <div class="game-card" onclick="openGame('cyber-quiz')">
+                        <div class="game-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Quiz Cibernético</h3>
+                        <p>Pon a prueba todo lo que has aprendido con este divertido quiz de preguntas y respuestas.</p>
+                        <div class="game-stats">
+                            <span><i class="fas fa-clock"></i> 8-10 min</span>
+                            <span><i class="fas fa-star"></i> Difícil</span>
+                        </div>
+                        <button class="btn btn-game">¡Desafío!</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Game Modal -->
+    <div class="game-modal" id="gameModal">
+        <div class="game-modal-content">
+            <div class="game-modal-header">
+                <h3 id="gameTitle">Juego</h3>
+                <button class="close-game" onclick="closeGame()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="game-modal-body" id="gameContent">
+                <!-- Game content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><i class="fas fa-shield-halved"></i> CiberNiños</h4>
+                    <p>Educación en ciberseguridad para niños de forma divertida e interactiva.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#contraseñas">Contraseñas Seguras</a></li>
+                        <li><a href="#phishing">Detectar Phishing</a></li>
+                        <li><a href="#privacidad">Proteger Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Para Padres</h4>
+                    <ul>
+                        <li><a href="#">Guías para Padres</a></li>
+                        <li><a href="#">Control Parental</a></li>
+                        <li><a href="#">Recursos Adicionales</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CiberNiños. Hecho con <i class="fas fa-heart"></i> para la educación digital segura.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/games.js"></script>
+</body>
+</html>
