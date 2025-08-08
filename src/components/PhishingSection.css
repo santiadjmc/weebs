@@ -1,0 +1,392 @@
+.phishing-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--cyber-purple) 0%, var(--cyber-blue) 100%);
+  color: white;
+  min-height: 100vh;
+}
+
+.phishing-section .section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.phishing-section .section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.phishing-section .section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, #ffffff, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.phishing-section .section-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.phishing-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.scenario-display {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.scenario-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.scenario-header h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.scenario-indicators {
+  display: flex;
+  gap: 10px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: var(--cyber-orange);
+  transform: scale(1.2);
+}
+
+.indicator:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.scenario-content h4 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--cyber-green);
+}
+
+.scenario-content p {
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.scenario-example {
+  margin: 20px 0;
+}
+
+.fake-email {
+  background: #f8f9fa;
+  color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  border-left: 4px solid #dc3545;
+}
+
+.email-header {
+  background: #e9ecef;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.email-body {
+  line-height: 1.6;
+}
+
+.fake-website {
+  background: #fff;
+  color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #dc3545;
+}
+
+.browser-bar {
+  background: #ddd;
+  padding: 10px 15px;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.website-content {
+  padding: 20px;
+}
+
+.fake-sms {
+  background: #25d366;
+  color: white;
+  border-radius: 15px;
+  padding: 15px;
+  max-width: 300px;
+  position: relative;
+}
+
+.fake-sms::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #25d366;
+}
+
+.sms-header {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+.red-flags {
+  margin: 25px 0;
+}
+
+.red-flags h5 {
+  color: var(--cyber-orange);
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.red-flags ul {
+  list-style: none;
+  padding: 0;
+}
+
+.red-flags li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+}
+
+.red-flags li::before {
+  content: '🚩';
+  position: absolute;
+  left: 0;
+}
+
+.explanation {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  border-left: 4px solid var(--cyber-green);
+}
+
+.quiz-section {
+  text-align: center;
+}
+
+.quiz-btn {
+  background: linear-gradient(45deg, var(--cyber-orange), var(--cyber-green));
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.quiz-display {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.quiz-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.quiz-header h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.quiz-content h4 {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  color: var(--cyber-green);
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.quiz-option {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 15px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.quiz-option:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--cyber-green);
+}
+
+.quiz-option.correct {
+  background: rgba(76, 175, 80, 0.3);
+  border-color: var(--cyber-green);
+}
+
+.quiz-option.incorrect {
+  background: rgba(244, 67, 54, 0.3);
+  border-color: #ff5252;
+}
+
+.quiz-result {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.quiz-result.success {
+  background: rgba(76, 175, 80, 0.2);
+  border: 2px solid var(--cyber-green);
+}
+
+.quiz-result.error {
+  background: rgba(244, 67, 54, 0.2);
+  border: 2px solid #ff5252;
+}
+
+.next-btn {
+  background: var(--cyber-blue);
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.next-btn:hover {
+  background: var(--cyber-purple);
+  transform: translateY(-1px);
+}
+
+.prevention-tips {
+  margin-top: 50px;
+}
+
+.prevention-tips h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--cyber-green);
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.tip-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.tip-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.tip-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--cyber-orange);
+}
+
+.tip-card p {
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .phishing-section {
+    padding: 60px 0;
+  }
+  
+  .phishing-section .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .scenario-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .scenario-display,
+  .quiz-display {
+    padding: 20px;
+  }
+  
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .quiz-options {
+    gap: 10px;
+  }
+  
+  .quiz-option {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+}
