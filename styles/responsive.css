@@ -1,0 +1,518 @@
+/* Responsive design styles */
+
+/* Breakpoints */
+/* 
+  xs: 0px
+  sm: 576px  
+  md: 768px  
+  lg: 992px  
+  xl: 1200px 
+  xxl: 1400px
+*/
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  /* Typography adjustments */
+  :root {
+    --font-size-4xl: 2rem;
+    --font-size-3xl: 1.5rem;
+    --font-size-2xl: 1.25rem;
+    --space-16: 2rem;
+    --space-20: 3rem;
+  }
+  
+  /* Container padding */
+  .container {
+    padding: 0 var(--space-3);
+  }
+  
+  /* Header adjustments */
+  .nav-container {
+    padding: 0 var(--space-3);
+  }
+  
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-card);
+    border: 1px solid var(--border-primary);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    flex-direction: column;
+    gap: 0;
+    padding: var(--space-4);
+    box-shadow: var(--shadow-lg);
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  .nav-menu.active {
+    display: flex;
+  }
+  
+  .mobile-menu-btn {
+    display: flex;
+  }
+  
+  .theme-toggle {
+    width: 50px;
+    height: 25px;
+  }
+  
+  .theme-toggle-thumb {
+    width: 21px;
+    height: 21px;
+  }
+  
+  [data-theme="dark"] .theme-toggle-thumb {
+    transform: translateX(25px);
+  }
+  
+  /* Hero section */
+  .hero-section {
+    padding: var(--space-16) 0;
+  }
+  
+  .hero-title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .hero-subtitle {
+    font-size: var(--font-size-base);
+  }
+  
+  .btn-large {
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--font-size-base);
+  }
+  
+  /* Grid adjustments */
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  
+  .tips-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  
+  .red-flags-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+  
+  .cyberbullying-grid,
+  .wellness-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  
+  /* Card adjustments */
+  .content-card,
+  .interactive-card {
+    padding: var(--space-6);
+  }
+  
+  .tip-card,
+  .action-card,
+  .wellness-card {
+    padding: var(--space-4);
+  }
+  
+  /* Form adjustments */
+  .post-options {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  
+  .privacy-option {
+    justify-content: center;
+  }
+  
+  /* Controls adjustments */
+  .control-group {
+    flex-direction: column;
+    gap: var(--space-2);
+    text-align: center;
+  }
+  
+  /* Age recommendations */
+  .age-group {
+    flex-direction: column;
+    gap: var(--space-1);
+    text-align: center;
+  }
+  
+  .habits-list {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Quiz adjustments */
+  .quiz-container,
+  .quiz-results {
+    padding: var(--space-6);
+    margin: 0 var(--space-3);
+  }
+  
+  /* Footer adjustments */
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  /* Cookie explanation */
+  .cookies-explanation {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .cookie-visual {
+    font-size: 3rem;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* Typography adjustments */
+  :root {
+    --font-size-4xl: 2.5rem;
+    --font-size-3xl: 1.75rem;
+  }
+  
+  /* Grid adjustments */
+  .red-flags-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .tips-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .habits-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Quiz adjustments */
+  .quiz-container,
+  .quiz-results {
+    margin: 0 var(--space-6);
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Navigation visible again */
+  .nav-menu {
+    display: flex;
+  }
+  
+  .mobile-menu-btn {
+    display: none;
+  }
+  
+  /* Grid adjustments */
+  .content-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .red-flags-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cyberbullying-grid,
+  .wellness-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Age recommendations as grid */
+  .age-recommendations {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2);
+  }
+  
+  .habits-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Footer adjustments */
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* Full grid layouts */
+  .red-flags-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .cyberbullying-grid,
+  .wellness-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .age-recommendations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2);
+  }
+  
+  .habits-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Footer adjustments */
+  .footer-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .habits-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* Larger spacing for bigger screens */
+  .hero-section {
+    padding: var(--space-20) 0;
+  }
+  
+  .content-section {
+    padding: var(--space-20) 0;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (orientation: landscape) and (max-height: 600px) {
+  .hero-section {
+    padding: var(--space-8) 0;
+  }
+  
+  .hero-illustration {
+    height: 120px;
+  }
+  
+  .floating-shield,
+  .floating-lock,
+  .floating-key {
+    font-size: 2rem;
+  }
+}
+
+/* High resolution displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Sharper borders for high-DPI displays */
+  .content-card,
+  .interactive-card,
+  .tip-card,
+  .action-card,
+  .wellness-card {
+    border-width: 0.5px;
+  }
+}
+
+/* Dark mode media query support */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-primary: #818cf8;
+    --color-primary-dark: #6366f1;
+    
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --bg-card: #1e293b;
+    --bg-overlay: rgba(255, 255, 255, 0.1);
+    
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --text-inverse: #0f172a;
+    
+    --border-primary: #334155;
+    --border-secondary: #475569;
+    
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  /* Remove transforms and transitions for users who prefer reduced motion */
+  .hover-lift:hover,
+  .hover-scale:hover,
+  .hover-rotate:hover {
+    transform: none !important;
+  }
+  
+  .content-card:hover,
+  .interactive-card:hover,
+  .tip-card:hover,
+  .action-card:hover,
+  .wellness-card:hover {
+    transform: none !important;
+  }
+  
+  /* Reduce animation duration */
+  * {
+    animation-duration: 0.1s !important;
+    transition-duration: 0.1s !important;
+  }
+}
+
+/* Print styles for better printing */
+@media print {
+  /* Hide interactive elements */
+  .theme-toggle,
+  .mobile-menu-btn,
+  .btn,
+  .quiz-section,
+  .interactive-card {
+    display: none !important;
+  }
+  
+  /* Optimize for print */
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  .content-section {
+    page-break-inside: avoid;
+    margin-bottom: 2em;
+  }
+  
+  .section-title {
+    color: black !important;
+    page-break-after: avoid;
+  }
+  
+  /* Ensure readability */
+  .tip-card,
+  .red-flag,
+  .action-card,
+  .wellness-card {
+    border: 1px solid #ccc !important;
+    page-break-inside: avoid;
+    margin-bottom: 1em;
+  }
+  
+  /* Remove shadows and complex backgrounds */
+  * {
+    box-shadow: none !important;
+    background: white !important;
+  }
+}
+
+/* Focus management for keyboard users */
+@media (hover: none) and (pointer: coarse) {
+  /* Touch device optimizations */
+  .btn,
+  .quiz-option,
+  .email-card,
+  .nav-link {
+    min-height: 44px; /* Minimum touch target size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Remove hover effects on touch devices */
+  .hover-lift:hover,
+  .hover-scale:hover,
+  .hover-rotate:hover {
+    transform: none;
+  }
+  
+  .content-card:hover,
+  .interactive-card:hover,
+  .tip-card:hover,
+  .action-card:hover,
+  .wellness-card:hover {
+    transform: none;
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+/* Container queries (where supported) */
+@supports (container-type: inline-size) {
+  .card-container {
+    container-type: inline-size;
+  }
+  
+  @container (max-width: 400px) {
+    .content-card,
+    .interactive-card {
+      padding: var(--space-4);
+    }
+    
+    .card-title {
+      font-size: var(--font-size-lg);
+    }
+  }
+}
+
+/* Accessibility improvements for specific screen sizes */
+@media (max-width: 768px) {
+  /* Increase tap targets on mobile */
+  button,
+  [role="button"],
+  input[type="button"],
+  input[type="submit"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Improve text readability */
+  body {
+    font-size: 16px; /* Prevent iOS zoom on focus */
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  textarea {
+    font-size: 16px; /* Prevent iOS zoom on focus */
+  }
+}
+
+/* Very wide screens (ultra-wide monitors) */
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1400px;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Very tall screens */
+@media (min-height: 900px) {
+  .hero-section {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .content-section {
+    padding: 6rem 0;
+  }
+}
