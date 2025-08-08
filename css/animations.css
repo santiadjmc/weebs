@@ -1,0 +1,536 @@
+/* Animation Keyframes */
+
+/* Floating Animation for Hero Icon */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Pulse Animation for Interactive Elements */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Bounce Animation for Buttons */
+@keyframes bounce {
+  0%, 20%, 60%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Slide In Animations */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Scale In Animation */
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Rotate Animation for Icons */
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Wiggle Animation for Interactive Elements */
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+/* Glow Animation */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(76, 110, 245, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(76, 110, 245, 0.6), 0 0 30px rgba(76, 110, 245, 0.4);
+  }
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Card Hover Effects */
+.learning-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.learning-card:hover {
+  animation: pulse 2s infinite;
+}
+
+/* Button Animations */
+.cta-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.cta-button:active {
+  animation: bounce 0.6s ease;
+}
+
+/* Theme Toggle Advanced Animation */
+.theme-toggle {
+  position: relative;
+  overflow: visible;
+}
+
+.theme-toggle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(76, 110, 245, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.theme-toggle:hover::after {
+  width: 100px;
+  height: 100px;
+}
+
+/* Navigation Animation */
+.nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(76, 110, 245, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.nav-link:hover::before {
+  left: 100%;
+}
+
+/* Progress Bar Animation */
+.progress-fill {
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: progressShine 2s ease-in-out infinite;
+}
+
+@keyframes progressShine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Card Icon Animations */
+.card-icon {
+  position: relative;
+}
+
+.card-icon::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: var(--gradient-accent);
+  border-radius: 17px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.learning-card:hover .card-icon::before {
+  opacity: 1;
+  animation: pulse 2s infinite;
+}
+
+/* Hero Illustration Enhancements */
+.cyber-hero::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    var(--primary-color),
+    var(--secondary-color),
+    var(--accent-color),
+    var(--primary-color)
+  );
+  opacity: 0.3;
+  animation: rotate360 10s linear infinite;
+  z-index: -1;
+}
+
+/* Achievement Animation */
+.achievement:not(.locked) {
+  animation: scaleIn 0.5s ease forwards;
+}
+
+.achievement:not(.locked)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  border-radius: inherit;
+  animation: glow 2s ease-in-out infinite;
+  z-index: -1;
+}
+
+/* Scroll-triggered Animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger Animation for Cards */
+.cards-grid .learning-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.cards-grid .learning-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.cards-grid .learning-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.cards-grid .learning-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.cards-grid .learning-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.cards-grid .learning-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* Special Card Animation */
+.special-card {
+  background: linear-gradient(-45deg, #ff006e, #ffd60a, #06ffa5, #4c6ef5);
+  background-size: 400% 400%;
+  animation: gradientShift 4s ease infinite;
+}
+
+/* Mobile Menu Animation */
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Loading Animation for Future Use */
+@keyframes loading {
+  0%, 20% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.loading-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  animation: loading 1.4s infinite ease-in-out;
+}
+
+.loading-dot:nth-child(1) { animation-delay: -0.32s; }
+.loading-dot:nth-child(2) { animation-delay: -0.16s; }
+.loading-dot:nth-child(3) { animation-delay: 0; }
+
+/* Hover Effects for Interactive Elements */
+.interactive-element {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.interactive-element:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-heavy);
+}
+
+/* Text Animation Effects */
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+}
+
+/* Micro-interactions */
+.micro-bounce:hover {
+  animation: bounce 0.6s ease;
+}
+
+.micro-wiggle:hover {
+  animation: wiggle 0.8s ease;
+}
+
+.micro-glow:hover {
+  animation: glow 1s ease-in-out;
+}
+
+/* Progress Ring Animation */
+.progress-ring-circle {
+  transition: stroke-dashoffset 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Entrance Animations for Page Load */
+.hero-title {
+  animation: slideInLeft 0.8s ease forwards;
+}
+
+.hero-subtitle {
+  animation: slideInLeft 0.8s ease 0.2s both;
+}
+
+.hero-description {
+  animation: slideInLeft 0.8s ease 0.4s both;
+}
+
+.cta-button {
+  animation: slideInUp 0.8s ease 0.6s both;
+}
+
+.hero-illustration {
+  animation: slideInRight 0.8s ease 0.3s both;
+}
+
+.section-title {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.learning-card {
+  animation: scaleIn 0.6s ease forwards;
+}
+
+/* Dark Theme Specific Animations */
+[data-theme="dark"] .theme-toggle::after {
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.3) 0%, transparent 70%);
+}
+
+[data-theme="dark"] .glow-effect {
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.4);
+}
+
+/* Performance Optimizations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Accessibility: Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .learning-card:hover,
+  .cta-button:active,
+  .achievement:not(.locked),
+  .special-card {
+    animation: none !important;
+  }
+  
+  .learning-card {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  .learning-card:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* Custom Scrollbar Animation */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-primary);
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gradient-accent);
+}

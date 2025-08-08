@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicación web educativa e interactiva para enseñar ciberseguridad a niños">
+    <title>CyberNiños - Aprende Ciberseguridad Divirtiéndote</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body data-theme="light">
+    <!-- Theme Toggle Button -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema claro/oscuro">
+        <div class="toggle-container">
+            <div class="toggle-button">
+                <i class="fas fa-sun sun-icon"></i>
+                <i class="fas fa-moon moon-icon"></i>
+            </div>
+        </div>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="main-nav" role="navigation" aria-label="Navegación principal">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>CyberNiños</span>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Abrir menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="#inicio" role="menuitem" class="nav-link active">Inicio</a></li>
+                <li role="none"><a href="#passwords" role="menuitem" class="nav-link">Contraseñas</a></li>
+                <li role="none"><a href="#phishing" role="menuitem" class="nav-link">Phishing</a></li>
+                <li role="none"><a href="#social-media" role="menuitem" class="nav-link">Redes Sociales</a></li>
+                <li role="none"><a href="#privacy" role="menuitem" class="nav-link">Privacidad</a></li>
+                <li role="none"><a href="#device-usage" role="menuitem" class="nav-link">Uso de Dispositivos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main role="main">
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">¡Bienvenido a CyberNiños!</h1>
+                    <p class="hero-subtitle">Aprende ciberseguridad de forma divertida e interactiva</p>
+                    <p class="hero-description">
+                        Descubre cómo mantenerte seguro en internet mientras juegas y te diviertes. 
+                        ¡Conviértete en un verdadero héroe de la ciberseguridad!
+                    </p>
+                    <button class="cta-button" id="startLearning">
+                        <i class="fas fa-play"></i>
+                        ¡Empezar a Aprender!
+                    </button>
+                </div>
+                <div class="hero-illustration">
+                    <div class="cyber-hero">
+                        <i class="fas fa-user-shield hero-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Sections -->
+        <section class="learning-sections">
+            <div class="container">
+                <h2 class="section-title">¿Qué vas a aprender?</h2>
+                
+                <div class="cards-grid">
+                    <!-- Strong Passwords Card -->
+                    <div class="learning-card" data-section="passwords">
+                        <div class="card-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <h3 class="card-title">Contraseñas Seguras</h3>
+                        <p class="card-description">
+                            Aprende a crear contraseñas fuertes que protejan tus cuentas como un superhéroe protege su identidad secreta.
+                        </p>
+                        <div class="card-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="0"></div>
+                            </div>
+                            <span class="progress-text">0% completado</span>
+                        </div>
+                        <button class="card-button">Explorar</button>
+                    </div>
+
+                    <!-- Phishing Awareness Card -->
+                    <div class="learning-card" data-section="phishing">
+                        <div class="card-icon">
+                            <i class="fas fa-fish"></i>
+                        </div>
+                        <h3 class="card-title">Conciencia sobre Phishing</h3>
+                        <p class="card-description">
+                            Identifica y evita los trucos que usan los cibercriminales para engañarte y robar tu información.
+                        </p>
+                        <div class="card-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="0"></div>
+                            </div>
+                            <span class="progress-text">0% completado</span>
+                        </div>
+                        <button class="card-button">Explorar</button>
+                    </div>
+
+                    <!-- Social Media Safety Card -->
+                    <div class="learning-card" data-section="social-media">
+                        <div class="card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="card-title">Redes Sociales Seguras</h3>
+                        <p class="card-description">
+                            Descubre cómo usar las redes sociales de manera segura y responsable, protegiendo tu privacidad.
+                        </p>
+                        <div class="card-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="0"></div>
+                            </div>
+                            <span class="progress-text">0% completado</span>
+                        </div>
+                        <button class="card-button">Explorar</button>
+                    </div>
+
+                    <!-- Online Privacy Card -->
+                    <div class="learning-card" data-section="privacy">
+                        <div class="card-icon">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <h3 class="card-title">Privacidad en Línea</h3>
+                        <p class="card-description">
+                            Protege tu información personal como un agente secreto protege sus misiones más importantes.
+                        </p>
+                        <div class="card-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="0"></div>
+                            </div>
+                            <span class="progress-text">0% completado</span>
+                        </div>
+                        <button class="card-button">Explorar</button>
+                    </div>
+
+                    <!-- Device Usage Card -->
+                    <div class="learning-card" data-section="device-usage">
+                        <div class="card-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="card-title">Uso Responsable de Dispositivos</h3>
+                        <p class="card-description">
+                            Aprende a usar tus dispositivos de manera equilibrada y saludable para tu bienestar digital.
+                        </p>
+                        <div class="card-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="0"></div>
+                            </div>
+                            <span class="progress-text">0% completado</span>
+                        </div>
+                        <button class="card-button">Explorar</button>
+                    </div>
+
+                    <!-- Fun Games Card -->
+                    <div class="learning-card special-card" data-section="games">
+                        <div class="card-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3 class="card-title">Juegos Divertidos</h3>
+                        <p class="card-description">
+                            ¡Pon a prueba tus conocimientos con mini-juegos súper divertidos y desafíos interactivos!
+                        </p>
+                        <div class="card-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="0"></div>
+                            </div>
+                            <span class="progress-text">¡Disponible pronto!</span>
+                        </div>
+                        <button class="card-button special-button">¡Jugar!</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overall Progress Section -->
+        <section class="progress-section">
+            <div class="container">
+                <h2 class="section-title">Tu Progreso como Cyber-Héroe</h2>
+                <div class="overall-progress">
+                    <div class="progress-circle">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle class="progress-ring-circle" stroke="var(--accent-color)" stroke-width="8" fill="transparent" r="52" cx="60" cy="60"/>
+                        </svg>
+                        <div class="progress-percentage">0%</div>
+                    </div>
+                    <div class="progress-info">
+                        <h3>¡Estás empezando tu aventura!</h3>
+                        <p>Completa todas las secciones para convertirte en un verdadero experto en ciberseguridad.</p>
+                        <div class="achievements">
+                            <div class="achievement locked">
+                                <i class="fas fa-star"></i>
+                                <span>Explorador Digital</span>
+                            </div>
+                            <div class="achievement locked">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Guardián de Contraseñas</span>
+                            </div>
+                            <div class="achievement locked">
+                                <i class="fas fa-eye"></i>
+                                <span>Detective Anti-Phishing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>CyberNiños</span>
+                </div>
+                <p class="footer-text">
+                    Aprendiendo ciberseguridad de forma divertida y segura.
+                </p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Sobre Nosotros</a>
+                    <a href="#" class="footer-link">Contacto</a>
+                    <a href="#" class="footer-link">Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    <script src="js/games.js"></script>
+</body>
+</html>
