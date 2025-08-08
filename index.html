@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CiberNiños - Aprende Ciberseguridad Divirtiéndote</title>
+    <meta name="description" content="Aplicación educativa interactiva para enseñar ciberseguridad a niños de manera divertida y segura">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with navigation and theme toggle -->
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Navegación principal">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                    <span>CiberNiños</span>
+                </div>
+                
+                <!-- Theme toggle button -->
+                <div class="theme-toggle" role="button" tabindex="0" aria-label="Cambiar entre modo claro y oscuro">
+                    <div class="toggle-track">
+                        <div class="toggle-thumb">
+                            <i class="fas fa-sun sun-icon" aria-hidden="true"></i>
+                            <i class="fas fa-moon moon-icon" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <!-- Navigation menu -->
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="#inicio" role="menuitem">Inicio</a></li>
+                    <li role="none"><a href="#contraseñas" role="menuitem">Contraseñas</a></li>
+                    <li role="none"><a href="#phishing" role="menuitem">Phishing</a></li>
+                    <li role="none"><a href="#redes-sociales" role="menuitem">Redes Sociales</a></li>
+                    <li role="none"><a href="#privacidad" role="menuitem">Privacidad</a></li>
+                    <li role="none"><a href="#dispositivos" role="menuitem">Dispositivos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main role="main">
+        <!-- Hero section -->
+        <section id="inicio" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>¡Bienvenidos a CiberNiños!</h1>
+                        <p class="hero-subtitle">Aprende sobre ciberseguridad de manera divertida y segura</p>
+                        <p class="hero-description">
+                            Descubre cómo protegerte en el mundo digital con juegos, actividades 
+                            y consejos diseñados especialmente para ti.
+                        </p>
+                        <button class="cta-button" onclick="scrollToSection('contraseñas')">
+                            <i class="fas fa-play" aria-hidden="true"></i>
+                            Comenzar Aventura
+                        </button>
+                    </div>
+                    <div class="hero-image">
+                        <div class="hero-character">
+                            <div class="character-body"></div>
+                            <div class="character-shield">
+                                <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Passwords section -->
+        <section id="contraseñas" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="fas fa-key" aria-hidden="true"></i>
+                    </div>
+                    <h2>Contraseñas Súper Fuertes</h2>
+                    <p>Aprende a crear contraseñas que sean como fortalezas impenetrables</p>
+                </div>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3><i class="fas fa-lightbulb" aria-hidden="true"></i> ¿Qué es una contraseña fuerte?</h3>
+                        <p>Una contraseña fuerte es como una llave especial que solo tú conoces. Debe ser:</p>
+                        <ul>
+                            <li><strong>Larga:</strong> Mínimo 8 caracteres (¡mejor si son más!)</li>
+                            <li><strong>Variada:</strong> Mezcla letras, números y símbolos especiales</li>
+                            <li><strong>Única:</strong> Diferente para cada sitio web o aplicación</li>
+                            <li><strong>Secreta:</strong> Solo tú la conoces</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3><i class="fas fa-tools" aria-hidden="true"></i> Trucos para crear contraseñas</h3>
+                        <div class="password-tips">
+                            <div class="tip">
+                                <strong>Método de la frase:</strong>
+                                <p>"Me gusta jugar fútbol los sábados" → MgJfLs2023!</p>
+                            </div>
+                            <div class="tip">
+                                <strong>Sustitución de letras:</strong>
+                                <p>Cambia algunas letras por números: a→@, e→3, i→!, o→0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Interactive password game -->
+                <div class="game-container">
+                    <h3>🎮 Juego: Constructor de Contraseñas</h3>
+                    <div class="password-game">
+                        <div class="game-input">
+                            <input type="text" id="password-input" placeholder="Crea tu contraseña aquí..." maxlength="50">
+                            <button onclick="checkPassword()">Verificar Fuerza</button>
+                        </div>
+                        <div class="password-strength">
+                            <div class="strength-bar">
+                                <div class="strength-fill"></div>
+                            </div>
+                            <p class="strength-text">Ingresa una contraseña para verificar su fuerza</p>
+                        </div>
+                        <div class="password-tips-live"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phishing section -->
+        <section id="phishing" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="fas fa-fish" aria-hidden="true"></i>
+                    </div>
+                    <h2>¡Cuidado con el Phishing!</h2>
+                    <p>Aprende a reconocer y evitar los "anzuelos" digitales</p>
+                </div>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3><i class="fas fa-question-circle" aria-hidden="true"></i> ¿Qué es el Phishing?</h3>
+                        <p>
+                            El phishing es como cuando alguien pretende ser tu amigo para engañarte. 
+                            Los ciberdelincuentes se hacen pasar por empresas conocidas (como bancos, 
+                            redes sociales o juegos) para robarte información personal.
+                        </p>
+                        <div class="warning-box">
+                            <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                            <p><strong>¡Nunca compartas!</strong> Contraseñas, números de tarjetas o información personal por email o mensajes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3><i class="fas fa-eye" aria-hidden="true"></i> Señales de Alerta</h3>
+                        <ul class="alert-list">
+                            <li><i class="fas fa-times-circle" aria-hidden="true"></i> Urgencia extrema: "¡Actúa ahora o perderás tu cuenta!"</li>
+                            <li><i class="fas fa-times-circle" aria-hidden="true"></i> Errores de escritura y gramática extraña</li>
+                            <li><i class="fas fa-times-circle" aria-hidden="true"></i> Solicitan información personal por email</li>
+                            <li><i class="fas fa-times-circle" aria-hidden="true"></i> Enlaces sospechosos o direcciones web extrañas</li>
+                            <li><i class="fas fa-times-circle" aria-hidden="true"></i> Remitente desconocido o dirección de email rara</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Phishing quiz game -->
+                <div class="game-container">
+                    <h3>🎯 Juego: Detective Anti-Phishing</h3>
+                    <div class="phishing-quiz">
+                        <div class="quiz-question" id="phishing-question">
+                            <p>¿Es este email seguro o es phishing?</p>
+                            <div class="email-example">
+                                <div class="email-header">
+                                    <span><strong>De:</strong> security@youbank.com</span>
+                                    <span><strong>Asunto:</strong> ¡URGENTE! Verifica tu cuenta AHORA</span>
+                                </div>
+                                <div class="email-content">
+                                    <p>Estimado cliente,</p>
+                                    <p>Hemos detectado actividad sospechosa en tu cuenta. Debes verificar tu información INMEDIATAMENTE o tu cuenta será cerrada.</p>
+                                    <p>Haz clic aquí: <a href="#" class="suspicious-link">www.youbank-verify.com/urgent</a></p>
+                                    <p>Gracias,<br>Equipo de Seguridad</p>
+                                </div>
+                            </div>
+                            <div class="quiz-buttons">
+                                <button class="quiz-btn safe-btn" onclick="answerPhishing(false)">Es Seguro ✅</button>
+                                <button class="quiz-btn danger-btn" onclick="answerPhishing(true)">Es Phishing ⚠️</button>
+                            </div>
+                        </div>
+                        <div class="quiz-result" id="phishing-result"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media section -->
+        <section id="redes-sociales" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="fas fa-users" aria-hidden="true"></i>
+                    </div>
+                    <h2>Redes Sociales Seguras</h2>
+                    <p>Diviértete en redes sociales sin poner en riesgo tu seguridad</p>
+                </div>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3><i class="fas fa-shield-alt" aria-hidden="true"></i> Reglas de Oro</h3>
+                        <div class="rules-list">
+                            <div class="rule">
+                                <div class="rule-icon">1</div>
+                                <div class="rule-content">
+                                    <h4>Piensa antes de compartir</h4>
+                                    <p>¿Te gustaría que toda tu escuela viera esta foto o información?</p>
+                                </div>
+                            </div>
+                            <div class="rule">
+                                <div class="rule-icon">2</div>
+                                <div class="rule-content">
+                                    <h4>Configura tu privacidad</h4>
+                                    <p>Solo tus amigos reales deberían ver tu contenido personal</p>
+                                </div>
+                            </div>
+                            <div class="rule">
+                                <div class="rule-icon">3</div>
+                                <div class="rule-content">
+                                    <h4>No aceptes desconocidos</h4>
+                                    <p>Solo acepta solicitudes de personas que conoces en la vida real</p>
+                                </div>
+                            </div>
+                            <div class="rule">
+                                <div class="rule-icon">4</div>
+                                <div class="rule-content">
+                                    <h4>Sé amable siempre</h4>
+                                    <p>Trata a otros como te gustaría que te traten</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> ¡Nunca Compartas!</h3>
+                        <div class="danger-list">
+                            <div class="danger-item">
+                                <i class="fas fa-home" aria-hidden="true"></i>
+                                <span>Tu dirección de casa</span>
+                            </div>
+                            <div class="danger-item">
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                                <span>Tu número de teléfono</span>
+                            </div>
+                            <div class="danger-item">
+                                <i class="fas fa-school" aria-hidden="true"></i>
+                                <span>El nombre de tu escuela</span>
+                            </div>
+                            <div class="danger-item">
+                                <i class="fas fa-calendar" aria-hidden="true"></i>
+                                <span>Cuándo estarás solo en casa</span>
+                            </div>
+                            <div class="danger-item">
+                                <i class="fas fa-key" aria-hidden="true"></i>
+                                <span>Contraseñas o códigos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Social media scenario game -->
+                <div class="game-container">
+                    <h3>🤔 Juego: ¿Qué Harías?</h3>
+                    <div class="scenario-game">
+                        <div class="scenario" id="social-scenario">
+                            <p class="scenario-text">Un desconocido te envía una solicitud de amistad y te dice que es amigo de tu primo. Te pide tu número de teléfono para "conocerte mejor". ¿Qué haces?</p>
+                            <div class="scenario-options">
+                                <button class="option-btn" onclick="answerScenario(1)">Le doy mi número, parece confiable</button>
+                                <button class="option-btn" onclick="answerScenario(2)">Primero pregunto a mi primo si lo conoce</button>
+                                <button class="option-btn" onclick="answerScenario(3)">No acepto la solicitud y no comparto información</button>
+                            </div>
+                        </div>
+                        <div class="scenario-result" id="scenario-result"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy section -->
+        <section id="privacidad" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="fas fa-lock" aria-hidden="true"></i>
+                    </div>
+                    <h2>Tu Privacidad es Importante</h2>
+                    <p>Aprende a proteger tu información personal en línea</p>
+                </div>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3><i class="fas fa-user-secret" aria-hidden="true"></i> ¿Qué es la Privacidad Digital?</h3>
+                        <p>
+                            Tu privacidad digital es como tu habitación personal en internet. Incluye:
+                        </p>
+                        <ul>
+                            <li>Las fotos y videos que compartes</li>
+                            <li>Los mensajes que envías</li>
+                            <li>Los sitios web que visitas</li>
+                            <li>La información personal que das</li>
+                            <li>Tu ubicación cuando usas apps</li>
+                        </ul>
+                        <div class="tip-box">
+                            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                            <p><strong>Consejo:</strong> Trata tu información personal como si fuera tu juguete más preciado. ¡No se la darías a cualquiera!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3><i class="fas fa-cog" aria-hidden="true"></i> Configuraciones de Privacidad</h3>
+                        <div class="privacy-steps">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Revisa las configuraciones</h4>
+                                    <p>Busca el símbolo de configuración (⚙️) en cada app o sitio web</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Cambia a "Privado"</h4>
+                                    <p>Haz que solo tus amigos puedan ver tu contenido</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Desactiva la ubicación</h4>
+                                    <p>No permitas que las apps sepan dónde estás todo el tiempo</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h4>Lee antes de aceptar</h4>
+                                    <p>Los términos y condiciones explican qué harán con tu información</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Device Usage section -->
+        <section id="dispositivos" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-icon">
+                        <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                    </div>
+                    <h2>Uso Responsable de Dispositivos</h2>
+                    <p>Cuida tus dispositivos como si fueran tu mascota digital</p>
+                </div>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3><i class="fas fa-shield-alt" aria-hidden="true"></i> Seguridad Física</h3>
+                        <div class="device-tips">
+                            <div class="tip-item">
+                                <i class="fas fa-lock" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Bloquea tu dispositivo</h4>
+                                    <p>Usa PIN, patrón o huella digital para protegerlo</p>
+                                </div>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-eye-slash" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Protege tu pantalla</h4>
+                                    <p>No dejes que otros vean lo que haces mientras usas tu dispositivo</p>
+                                </div>
+                            </div>
+                            <div class="tip-item">
+                                <i class="fas fa-hand-paper" aria-hidden="true"></i>
+                                <div>
+                                    <h4>No lo prestes</h4>
+                                    <p>Tu dispositivo tiene información personal, manténlo contigo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3><i class="fas fa-download" aria-hidden="true"></i> Descargas Seguras</h3>
+                        <div class="download-rules">
+                            <div class="rule-safe">
+                                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                                <div>
+                                    <h4>SÍ Descargar de:</h4>
+                                    <ul>
+                                        <li>Google Play Store / App Store oficial</li>
+                                        <li>Sitios web oficiales de las apps</li>
+                                        <li>Tiendas verificadas por tu dispositivo</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="rule-danger">
+                                <i class="fas fa-times-circle" aria-hidden="true"></i>
+                                <div>
+                                    <h4>NO Descargar de:</h4>
+                                    <ul>
+                                        <li>Enlaces en emails sospechosos</li>
+                                        <li>Sitios web que no conoces</li>
+                                        <li>Apps que piden permisos extraños</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Device security checklist -->
+                <div class="game-container">
+                    <h3>✅ Lista de Verificación de Seguridad</h3>
+                    <div class="security-checklist">
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check1">
+                            <label for="check1">Mi dispositivo tiene contraseña o PIN</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check2">
+                            <label for="check2">Solo descargo apps de tiendas oficiales</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check3">
+                            <label for="check3">Mantengo mi software actualizado</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check4">
+                            <label for="check4">No comparto mi dispositivo con desconocidos</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="check5">
+                            <label for="check5">Reviso los permisos de las apps que instalo</label>
+                        </div>
+                        <div class="checklist-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                            <p class="progress-text">Completa todos los elementos para ser un experto en seguridad</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-shield-alt" aria-hidden="true"></i> CiberNiños</h3>
+                    <p>Educación en ciberseguridad diseñada especialmente para niños</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#contraseñas">Contraseñas Seguras</a></li>
+                        <li><a href="#phishing">Anti-Phishing</a></li>
+                        <li><a href="#redes-sociales">Redes Sociales</a></li>
+                        <li><a href="#privacidad">Privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Consejos Rápidos</h4>
+                    <ul>
+                        <li>Nunca compartas información personal</li>
+                        <li>Usa contraseñas fuertes y únicas</li>
+                        <li>Piensa antes de hacer clic</li>
+                        <li>Mantén tus dispositivos seguros</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CiberNiños - Educación Digital Segura para Todos</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
