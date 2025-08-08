@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import './Hero.css';
 
@@ -26,7 +27,7 @@ const Hero = () => {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [phrases.length]);
 
   const scrollToContent = () => {
     const contentSection = document.querySelector('#passwords');
