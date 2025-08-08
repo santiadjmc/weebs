@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" style="max-width: 100%; height: auto;">
+  <!-- Character Base -->
+  <circle cx="200" cy="180" r="120" fill="#FFD93D" stroke="#FF6B6B" stroke-width="4"/>
+  
+  <!-- Face -->
+  <circle cx="170" cy="150" r="8" fill="#2C3E50"/>
+  <circle cx="230" cy="150" r="8" fill="#2C3E50"/>
+  <path d="M 180 190 Q 200 210 220 190" stroke="#2C3E50" stroke-width="3" fill="none"/>
+  
+  <!-- Cape/Shield -->
+  <ellipse cx="200" cy="320" rx="80" ry="60" fill="#4ECDC4" opacity="0.8"/>
+  
+  <!-- Shield Symbol -->
+  <path d="M 200 260 L 160 300 L 200 350 L 240 300 Z" fill="#45B7D1" stroke="#2C3E50" stroke-width="2"/>
+  
+  <!-- Lock Icon on Shield -->
+  <rect x="190" y="300" width="20" height="15" rx="2" fill="#2C3E50"/>
+  <path d="M 185 300 L 185 295 Q 185 285 200 285 Q 215 285 215 295 L 215 300" stroke="#2C3E50" stroke-width="2" fill="none"/>
+  
+  <!-- Arms -->
+  <circle cx="120" cy="200" r="25" fill="#FFD93D"/>
+  <circle cx="280" cy="200" r="25" fill="#FFD93D"/>
+  
+  <!-- Sparkles/Magic -->
+  <g opacity="0.7">
+    <polygon points="100,100 105,110 115,110 107,118 110,128 100,123 90,128 93,118 85,110 95,110" fill="#96CEB4"/>
+    <polygon points="300,120 303,125 308,125 305,129 306,134 300,131 294,134 295,129 292,125 297,125" fill="#FFEAA7"/>
+    <polygon points="320,250 323,255 328,255 325,259 326,264 320,261 314,264 315,259 312,255 317,255" fill="#FD79A8"/>
+    <polygon points="80,250 85,260 95,260 87,268 90,278 80,273 70,278 73,268 65,260 75,260" fill="#4ECDC4"/>
+  </g>
+  
+  <!-- Cyber Elements -->
+  <g stroke="#45B7D1" stroke-width="2" fill="none" opacity="0.6">
+    <circle cx="350" cy="80" r="15"/>
+    <circle cx="350" cy="80" r="10"/>
+    <circle cx="350" cy="80" r="5"/>
+    
+    <circle cx="50" cy="350" r="12"/>
+    <circle cx="50" cy="350" r="8"/>
+    <circle cx="50" cy="350" r="4"/>
+  </g>
+  
+  <!-- WiFi Signal -->
+  <g stroke="#4ECDC4" stroke-width="2" fill="none" opacity="0.5">
+    <path d="M 30 40 Q 60 20 90 40"/>
+    <path d="M 35 50 Q 60 35 85 50"/>
+    <path d="M 40 60 Q 60 50 80 60"/>
+    <circle cx="60" cy="65" r="2" fill="#4ECDC4"/>
+  </g>
+  
+  <!-- Binary Code -->
+  <g fill="#96CEB4" opacity="0.4" font-family="monospace" font-size="12">
+    <text x="30" y="200">1010</text>
+    <text x="30" y="220">0110</text>
+    <text x="350" y="300">1001</text>
+    <text x="350" y="320">0101</text>
+  </g>
+</svg>
