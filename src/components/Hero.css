@@ -17,7 +17,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 0.1;
+  opacity: var(--particle-bg-opacity, 0.1);
   z-index: 1;
 }
 
@@ -33,8 +33,10 @@
   position: absolute;
   font-size: clamp(1.5rem, 3vw, 3rem);
   animation: floatUpDown infinite linear;
-  opacity: 0.6;
+  opacity: var(--particle-opacity, 0.6);
+  color: var(--particle-color, inherit);
   pointer-events: none;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes floatUpDown {
@@ -43,10 +45,10 @@
     opacity: 0;
   }
   10% {
-    opacity: 0.6;
+    opacity: var(--particle-opacity, 0.6);
   }
   90% {
-    opacity: 0.6;
+    opacity: var(--particle-opacity, 0.6);
   }
   100% {
     transform: translateY(-100px) rotate(360deg);
@@ -358,6 +360,7 @@
 
   .floating-icon {
     font-size: clamp(1rem, 2vw, 2rem);
+    opacity: calc(var(--particle-opacity, 0.6) * 0.8); /* Reduce opacity on mobile */
   }
 }
 
@@ -386,6 +389,15 @@
 
   .scroll-indicator {
     bottom: 1rem;
+  }
+  
+  .floating-icon {
+    font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+    opacity: calc(var(--particle-opacity, 0.6) * 0.6); /* Further reduce opacity on very small screens */
+  }
+  
+  .hero-background {
+    opacity: calc(var(--particle-bg-opacity, 0.1) * 0.8); /* Reduce background particle density */
   }
 }
 

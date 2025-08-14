@@ -5,6 +5,7 @@ import './Hero.css';
 
 const Hero = () => {
   const [currentPhrase, setCurrentPhrase] = useState(0);
+  const [particleCount, setParticleCount] = useState(20);
   
   const phrases = [
     "¡Aprende a protegerte en línea!",
@@ -19,6 +20,27 @@ const Hero = () => {
     { name: "Privacidad", icon: "🔒", color: "--cyber-green" },
     { name: "Navegador Seguro", icon: "🌐", color: "--cyber-orange" }
   ];
+
+  // Set responsive particle count based on screen size
+  useEffect(() => {
+    const updateParticleCount = () => {
+      const width = window.innerWidth;
+      if (width < 480) {
+        setParticleCount(8); // Very small screens
+      } else if (width < 768) {
+        setParticleCount(12); // Mobile
+      } else if (width < 1200) {
+        setParticleCount(16); // Tablet
+      } else {
+        setParticleCount(20); // Desktop
+      }
+    };
+
+    updateParticleCount();
+    window.addEventListener('resize', updateParticleCount);
+    
+    return () => window.removeEventListener('resize', updateParticleCount);
+  }, []);
 
   // Rotate phrases every 3 seconds
   useEffect(() => {
@@ -44,7 +66,7 @@ const Hero = () => {
       {/* Animated background elements */}
       <div className="hero-background">
         <div className="floating-icons">
-          {[...Array(20)].map((_, i) => (
+          {[...Array(particleCount)].map((_, i) => (
             <div 
               key={i}
               className="floating-icon"
