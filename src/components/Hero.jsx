@@ -133,12 +133,29 @@ const Hero = () => {
             usar redes sociales de manera segura y mucho más.
           </motion.p>
 
+          {/* About Us Section */}
+          <motion.div 
+            className="about-us-section"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+          >
+            <p className="about-us-description">
+              Somos una compañía enfocada en proteger y educar a las futuras generaciones en el mundo digital. 
+              A través de actividades lúdicas, héroes cibernéticos y herramientas prácticas enseñamos a niñas y niños 
+              cómo crear contraseñas fuertes, identificar riesgos y navegar con confianza. Aprender seguridad también puede ser divertido.
+            </p>
+            <p className="company-slogan">
+              <strong>Formando guardianes del mundo digital.</strong>
+            </p>
+          </motion.div>
+
           {/* Cyber Heroes */}
           <motion.div 
             className="cyber-heroes"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
           >
             <h3>Conoce a nuestros Ciber-Héroes:</h3>
             <div className="heroes-grid">
@@ -175,7 +192,7 @@ const Hero = () => {
             className="hero-cta"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
+            transition={{ duration: 0.8, delay: 1.3 }}
           >
             <button 
               className="cta-button"
@@ -193,7 +210,7 @@ const Hero = () => {
           className="scroll-indicator"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
+          transition={{ duration: 1, delay: 1.6 }}
         >
           <div className="scroll-arrow" onClick={scrollToContent}>
             <span>Desliza hacia abajo</span>
