@@ -47,9 +47,9 @@
   --navbar-bg: rgba(255, 255, 255, 0.95);
   
   /* Particle visibility for light theme */
-  --particle-opacity: 0.8;
-  --particle-color: #2d3748;
-  --particle-bg-opacity: 0.05;
+  --particle-opacity: 0.6;
+  --particle-color: #4a5568;
+  --particle-bg-opacity: 0.15;
 }
 
 .dark-theme {

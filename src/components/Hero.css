@@ -144,6 +144,35 @@
   margin-bottom: 2rem;
 }
 
+/* ===== ABOUT US SECTION ===== */
+.about-us-section {
+  width: 100%;
+  max-width: 700px;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.about-us-description {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.company-slogan {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.company-slogan strong {
+  background: linear-gradient(135deg, var(--cyber-blue), var(--cyber-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
 /* ===== CYBER HEROES SECTION ===== */
 .cyber-heroes {
   width: 100%;
