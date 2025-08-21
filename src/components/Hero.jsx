@@ -187,12 +187,71 @@ const Hero = () => {
             </div>
           </motion.div>
 
+          {/* Team Section */}
+          <motion.div 
+            className="team-section"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.1 }}
+          >
+            <h3>Conoce a Nuestro Equipo:</h3>
+            <div className="team-grid">
+              <motion.div
+                className="team-card"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ 
+                  duration: 0.5, 
+                  delay: 1.2,
+                  type: "spring",
+                  stiffness: 100
+                }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  transition: { type: "spring", stiffness: 300 }
+                }}
+              >
+                <div className="team-image">
+                  <img src="/santiago.jpg" alt="Santiago Morales" />
+                </div>
+                <div className="team-info">
+                  <h4>Santiago Morales</h4>
+                  <p>Desarrollador y especialista en ciberseguridad</p>
+                </div>
+              </motion.div>
+              
+              <motion.div
+                className="team-card"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ 
+                  duration: 0.5, 
+                  delay: 1.3,
+                  type: "spring",
+                  stiffness: 100
+                }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  transition: { type: "spring", stiffness: 300 }
+                }}
+              >
+                <div className="team-image">
+                  <img src="/pablo.jpg" alt="Pablo Catalán" />
+                </div>
+                <div className="team-info">
+                  <h4>Pablo Catalán</h4>
+                  <p>Experto en educación y seguridad digital</p>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+
           {/* Call to action button */}
           <motion.div 
             className="hero-cta"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.3 }}
+            transition={{ duration: 0.8, delay: 1.4 }}
           >
             <button 
               className="cta-button"
@@ -210,7 +269,7 @@ const Hero = () => {
           className="scroll-indicator"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.6 }}
+          transition={{ duration: 1, delay: 1.7 }}
         >
           <div className="scroll-arrow" onClick={scrollToContent}>
             <span>Desliza hacia abajo</span>

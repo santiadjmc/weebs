@@ -251,6 +251,102 @@
   color: var(--hero-color);
 }
 
+/* ===== TEAM SECTION ===== */
+.team-section {
+  width: 100%;
+  margin: 3rem 0 2rem;
+}
+
+.team-section h3 {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.team-card {
+  background: var(--card-bg);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  text-align: center;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, transparent, var(--cyber-green), transparent);
+  transition: left 0.6s ease;
+  opacity: 0.1;
+}
+
+.team-card:hover::before {
+  left: 100%;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border-color: var(--cyber-green);
+}
+
+.team-image {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--cyber-green);
+  position: relative;
+}
+
+.team-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.team-card:hover .team-image img {
+  transform: scale(1.1);
+}
+
+.team-info h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--cyber-blue), var(--cyber-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.team-info p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
 /* ===== CALL TO ACTION ===== */
 .hero-cta {
   margin: 3rem 0 2rem;
@@ -391,6 +487,21 @@
     font-size: clamp(1rem, 2vw, 2rem);
     opacity: calc(var(--particle-opacity, 0.6) * 0.8); /* Reduce opacity on mobile */
   }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 400px;
+  }
+
+  .team-card {
+    padding: 1.5rem;
+  }
+
+  .team-image {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -423,6 +534,29 @@
   .floating-icon {
     font-size: clamp(0.8rem, 1.5vw, 1.5rem);
     opacity: calc(var(--particle-opacity, 0.6) * 0.6); /* Further reduce opacity on very small screens */
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 320px;
+  }
+
+  .team-card {
+    padding: 1rem;
+  }
+
+  .team-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .team-info h4 {
+    font-size: 1.1rem;
+  }
+
+  .team-info p {
+    font-size: 0.9rem;
   }
   
   .hero-background {
