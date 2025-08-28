@@ -7,7 +7,8 @@ const ThemeContext = createContext();
 export const ThemeProvider = ({ children }) => {
   // Get initial theme from localStorage or default to light
   const [isDarkMode, setIsDarkMode] = useState(() => {
-    const saved = localStorage.getItem('ciberninos-theme');
+    const tsaved = localStorage.getItem('ciberninos-theme');
+    const saved = tsaved && tsaved.length > 0 ? tsaved : (function () { localStorage.setItem("ciberninos-theme", "light"); return "light"; } )();
     return saved === 'dark';
   });
 
