@@ -173,6 +173,143 @@
   font-weight: 700;
 }
 
+/* ===== TEAM SECTION ===== */
+.team-section {
+  width: 100%;
+  margin: 3rem 0;
+}
+
+.team-section h3 {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.team-card {
+  background: var(--card-bg);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  text-align: center;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, transparent, var(--team-color), transparent);
+  transition: left 0.6s ease;
+  opacity: 0.1;
+}
+
+.team-card:hover::before {
+  left: 100%;
+}
+
+.team-card:hover {
+  border-color: var(--team-color);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.team-image {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--team-color);
+  transition: all var(--transition-normal);
+}
+
+.team-card:hover .team-image {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.team-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.team-card:hover .team-image img {
+  transform: scale(1.1);
+}
+
+.team-info {
+  position: relative;
+  z-index: 2;
+}
+
+.team-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  transition: color var(--transition-normal);
+}
+
+.team-card:hover .team-name {
+  color: var(--team-color);
+}
+
+.team-role {
+  font-size: 1.1rem;
+  color: var(--team-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.team-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.team-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.skill-tag {
+  background: var(--team-color);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0.9;
+  transition: all var(--transition-normal);
+}
+
+.team-card:hover .skill-tag {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
 /* ===== CYBER HEROES SECTION ===== */
 .cyber-heroes {
   width: 100%;
@@ -383,6 +520,28 @@
     font-size: 1.1rem;
   }
 
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .team-card {
+    padding: 1.5rem;
+  }
+
+  .team-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-name {
+    font-size: 1.2rem;
+  }
+
+  .team-description {
+    font-size: 0.9rem;
+  }
+
   .hero-subtitle-container {
     height: 3rem;
   }
@@ -414,6 +573,38 @@
   .cta-button {
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 280px;
+    gap: 1rem;
+  }
+
+  .team-card {
+    padding: 1rem;
+  }
+
+  .team-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .team-name {
+    font-size: 1.1rem;
+  }
+
+  .team-role {
+    font-size: 1rem;
+  }
+
+  .team-description {
+    font-size: 0.85rem;
+  }
+
+  .skill-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
   }
 
   .scroll-indicator {

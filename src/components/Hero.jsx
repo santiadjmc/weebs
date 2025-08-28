@@ -21,6 +21,25 @@ const Hero = () => {
     { name: "Navegador Seguro", icon: "🌐", color: "--cyber-orange" }
   ];
 
+  const teamMembers = [
+    {
+      name: "Santiago Morales",
+      role: "Especialista en Ciberseguridad",
+      description: "El programador detrás de CiberNiños. Especialista en ciberseguridad con pasión por educar a las nuevas generaciones sobre la protección digital. Su experiencia técnica y visión pedagógica han dado vida a esta plataforma educativa.",
+      image: "/santiago.jpg",
+      skills: ["Programación", "Ciberseguridad", "Educación Digital"],
+      color: "--cyber-blue"
+    },
+    {
+      name: "Pablo Catalán", 
+      role: "Director Creativo",
+      description: "El talento creativo que da forma visual a CiberNiños. Diseñador especializado en experiencias educativas que conectan con los niños. Su creatividad transforma conceptos complejos de seguridad en aventuras divertidas y accesibles.",
+      image: "/pablo.jpg",
+      skills: ["Diseño UX/UI", "Educación Visual", "Creatividad"],
+      color: "--cyber-purple"
+    }
+  ];
+
   // Set responsive particle count based on screen size
   useEffect(() => {
     const updateParticleCount = () => {
@@ -148,6 +167,53 @@ const Hero = () => {
             <p className="company-slogan">
               <strong>Formando guardianes del mundo digital.</strong>
             </p>
+          </motion.div>
+
+          {/* Team Section */}
+          <motion.div 
+            className="team-section"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            <h3>Conoce a nuestro equipo:</h3>
+            <div className="team-grid">
+              {teamMembers.map((member, index) => (
+                <motion.div
+                  key={member.name}
+                  className="team-card"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ 
+                    duration: 0.6, 
+                    delay: 0.9 + (index * 0.2),
+                    type: "spring",
+                    stiffness: 100
+                  }}
+                  whileHover={{ 
+                    scale: 1.05,
+                    transition: { type: "spring", stiffness: 300 }
+                  }}
+                  style={{
+                    '--team-color': `var(${member.color})`
+                  }}
+                >
+                  <div className="team-image">
+                    <img src={member.image} alt={member.name} />
+                  </div>
+                  <div className="team-info">
+                    <h4 className="team-name">{member.name}</h4>
+                    <p className="team-role">{member.role}</p>
+                    <p className="team-description">{member.description}</p>
+                    <div className="team-skills">
+                      {member.skills.map((skill, skillIndex) => (
+                        <span key={skillIndex} className="skill-tag">{skill}</span>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
 
           {/* Cyber Heroes */}
